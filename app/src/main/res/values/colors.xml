@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="text1color">#cac48d</color>
+    <color name="button_stroke">#320ed1</color>
+    <color name="bigScore">#ffe91f</color>
+    <color name="playerName">#998b0d</color>
+
+    <color name="foreground">#553dbe</color>
+    <color name="butons_old">#1e1e1e</color>
+    <color name="butons">#050505</color>
+    <color name="butons_test">#fff12b</color>
+</resources>

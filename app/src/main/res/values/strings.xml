@@ -1,0 +1,27 @@
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">ScoreKeeper</string>
+    <string name="player_one_name_text">Player 1</string>
+    <string name="player_one_score_text">00000</string>
+    <string name="player_two_name_text">Player 2</string>
+    <string name="player_two_score_text">00000</string>
+    <string name="order_summary_name">Name: <xliff:g id="name" example="Amy">%s</xliff:g></string>
+    <string name="game_over_2000_points"><xliff:g id="player_name" example="player1">%s</xliff:g> won. The player achieved <xliff:g id="target_score" example="2000">%d</xliff:g> points!</string>
+    <string name="game_over_stars_collected"><xliff:g id="player_name" example="player1">%s</xliff:g> won. The player collected <xliff:g id="target_score" example="2000">%d</xliff:g> stars!</string>
+    <string name="dummy_left_text">2590 = _30pt x 5</string>
+    <string name="dummy_right_text">5 x  _30pt = 2590</string>
+    <string name="instructions"> HELP </string>
+    <string name="instructions_title"> INSTRUCTIONS </string>
+    <string name="reset">RESET</string>
+    <string name="change_player_name">Change player name</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="points">pt</string>
+    <string name="reset_scores">"Reset the scores?"</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="instructions_line1">The game is won by the player who reaches 2000 points or collects 30 stars.</string>
+    <string name="instructions_line2">Press on player name to change name.</string>
+    <string name="instructions_line3">After game is finished you can start again by pressing RESET.</string>
+    <string name="empty_player_name">"Player name must contain at least one character!"</string>
+
+</resources>
