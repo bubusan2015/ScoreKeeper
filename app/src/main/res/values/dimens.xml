@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+    <dimen name="default_margin">16dp</dimen>
     <dimen name="left_right_margin">14dp</dimen>
     <dimen name="top_bott_margin">5dp</dimen>
     <dimen name="minimun_padding">8dp</dimen>
     <dimen name="drawable_padding">16dp</dimen>
     <dimen name="align_left_1">32dp</dimen>
     <dimen name="folosesc_greutatea">0dp</dimen>
+    <dimen name="ship_size">80dp</dimen>
 
+    <dimen name="ship_layout_margin_top">10dp</dimen>
 
     <dimen name="large_text_size">45sp</dimen>
     <dimen name="normal_text_size">25sp</dimen>
