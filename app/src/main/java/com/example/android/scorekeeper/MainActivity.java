@@ -15,6 +15,36 @@ import android.widget.Toast;
 import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Boolean gameOver=false;
+    private String gameMessage="";
+    private int scorePlayer_1=0;
+    private int scorePlayer_2=0;
+    private String player_1_name,player_2_name;
+    // number of ships destroyed by each player
+    private int ship_type_1_player_1_count=0,ship_type_1_player_2_count=0,
+            ship_type_2_player_1_count=0,ship_type_2_player_2_count=0,
+            ship_type_3_player_1_count=0,ship_type_3_player_2_count=0,
+            ship_type_4_player_1_count=0,ship_type_4_player_2_count=0;
+
+    private int shipType_1_player_1_score=0,shipType_1_player_2_score=0,
+            shipType_2_player_1_score=0,shipType_2_player_2_score=0,
+            shipType_3_player_1_score=0,shipType_3_player_2_score=0,
+            shipType_4_player_1_score=0,shipType_4_player_2_score=0;
+    private TextView mPlayer_1_name,mPlayer_2_name,mPlayer_1_score,mPlayer_2_score,
+            mShipType_1_player_1_score,mShipType_1_player_2_score,
+            mShipType_2_player_1_score,mShipType_2_player_2_score,
+            mShipType_3_player_1_score,mShipType_3_player_2_score,
+            mShipType_4_player_1_score,mShipType_4_player_2_score ;
+    private Button mShip_1_player_1_button,mShip_1_player_2_button,
+            mShip_2_player_1_button,mShip_2_player_2_button,
+            mShip_3_player_1_button,mShip_3_player_2_button,
+            mShip_4_player_1_button,mShip_4_player_2_button;
+    private Button mInstructions,mReset;
+    private String points;
+
+
+
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -48,34 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         calculateScore();
         updateUI();
     }
-
-    private Boolean gameOver=false;
-    private String gameMessage="";
-    private int scorePlayer_1=0;
-    private int scorePlayer_2=0;
-    private String player_1_name,player_2_name;
-    // number of ships destroyed by each player
-    private int ship_type_1_player_1_count=0,ship_type_1_player_2_count=0,
-                ship_type_2_player_1_count=0,ship_type_2_player_2_count=0,
-                ship_type_3_player_1_count=0,ship_type_3_player_2_count=0,
-                ship_type_4_player_1_count=0,ship_type_4_player_2_count=0;
-
-    private int shipType_1_player_1_score=0,shipType_1_player_2_score=0,
-                shipType_2_player_1_score=0,shipType_2_player_2_score=0,
-                shipType_3_player_1_score=0,shipType_3_player_2_score=0,
-                shipType_4_player_1_score=0,shipType_4_player_2_score=0;
-    private TextView mPlayer_1_name,mPlayer_2_name,mPlayer_1_score,mPlayer_2_score,
-        mShipType_1_player_1_score,mShipType_1_player_2_score,
-        mShipType_2_player_1_score,mShipType_2_player_2_score,
-        mShipType_3_player_1_score,mShipType_3_player_2_score,
-        mShipType_4_player_1_score,mShipType_4_player_2_score ;
-    private Button mShip_1_player_1_button,mShip_1_player_2_button,
-            mShip_2_player_1_button,mShip_2_player_2_button,
-            mShip_3_player_1_button,mShip_3_player_2_button,
-            mShip_4_player_1_button,mShip_4_player_2_button;
-    private Button mInstructions,mReset;
-    private String points;
-
 
 
     @Override
@@ -212,13 +214,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.setView(view);
         final AlertDialog dialog=builder.create();
         dialog.show();
-
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                   dialog.dismiss();
             }
-
         });
         return ;
     }
@@ -233,7 +233,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             temp_playerName=mPlayer_1_name.getText().toString();
         else
             temp_playerName=mPlayer_2_name.getText().toString();
-
         player_name.setText(temp_playerName);
         Button okButton=(Button) view.findViewById(R.id.ok_button);
         Button cancelButton=(Button) view.findViewById(R.id.cancel_button);
@@ -359,15 +358,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     String padLeft(int x,int padSize) {
         String input =String.valueOf(x);
-        String result="";
+        StringBuilder result=new StringBuilder("");
         for(int i=input.length();i<padSize;i++)
-            result=result+" ";
-        return result+input;
+            result.append(" ");
+        return result.toString()+input;
     }
     String padRight(int x,int padSize) {
         String input =String.valueOf(x);
-        String result="";
+        StringBuilder result=new StringBuilder("");
         for(int i=input.length();i<padSize;i++)
-            result=result+" ";
-        return input+result;    }
+            result.append(" ");
+        return input+result.toString();    }
 }
